@@ -1,4 +1,4 @@
-import { fetchPosts } from "/data/posts/fetchPosts";
+import { fetchPosts } from "/data/posts/postsService";
 
 const Posts = async () => {
   let posts;

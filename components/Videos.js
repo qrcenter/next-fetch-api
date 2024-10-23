@@ -1,4 +1,4 @@
-import { fetchVideos } from "/data/videos/fetchVideos";
+import { fetchVideos } from "/data/videos/videosService";
 
 const Videos = async () => {
   let videos;
