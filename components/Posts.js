@@ -1,6 +1,4 @@
-// app/components/Posts.js
-
-import { fetchPosts } from '../api/fetchData';
+import { fetchPosts } from "/data/posts/fetchPosts";
 
 const Posts = async () => {
   let posts;
@@ -18,9 +16,7 @@ const Posts = async () => {
       {error && <div>Error: {error}</div>}
       <ul>
         {posts ? (
-          posts.data.map((post) => (
-            <li key={post.id}>{post.title}</li>
-          ))
+          posts.data.map((post) => <li key={post.id}>{post.title}</li>)
         ) : (
           <li>No posts available</li>
         )}

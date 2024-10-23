@@ -1,6 +1,4 @@
-// app/components/Videos.js
-
-import { fetchVideos } from '../api/fetchData';
+import { fetchVideos } from "/data/videos/fetchVideos";
 
 const Videos = async () => {
   let videos;
@@ -18,9 +16,7 @@ const Videos = async () => {
       {error && <div>Error: {error}</div>}
       <ul>
         {videos ? (
-          videos.data.map((video) => (
-            <li key={video.id}>{video.title}</li>
-          ))
+          videos.data.map((video) => <li key={video.id}>{video.title}</li>)
         ) : (
           <li>No videos available</li>
         )}

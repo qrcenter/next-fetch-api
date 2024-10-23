@@ -1,7 +1,7 @@
 // app/page.js
 
-import Posts from './components/Posts';
-import Videos from './components/Videos';
+import Posts from '/components/Posts';
+import Videos from '/components/Videos';
 
 const HomePage = async () => {
   return (
