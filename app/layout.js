@@ -1,16 +1,19 @@
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Navbar from "/components/Navbar"
+import Hero2 from "/components/Hero2"
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+import { Noto_Kufi_Arabic } from 'next/font/google'
+const notoKufi = Noto_Kufi_Arabic({ subsets: ['arabic'],  weight: "400", })
 
 export const metadata = {
   title: "Create Next App",
@@ -19,10 +22,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+       className={notoKufi.className}
       >
+        <Navbar/>
+        <Hero2/>
         {children}
       </body>
     </html>
